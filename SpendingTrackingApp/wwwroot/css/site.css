@@ -20,3 +20,23 @@ body {
 .e-bigger{
     font-size: x-large;
 }
+
+.e-btn-group.my-rbt-group{
+    width: 100%;
+}
+
+.e-btn-group.my-rbt-group.e-btn{
+    width: 50%;
+}
+.my-rbt-group label.e-btn{
+    box-shadow: none !important;
+    border: 1px solid #fff;
+    background-color: rgb(0, 148, 255);
+    color: #fff;
+}
+
+.e-btn-group.my-rbt-group.e-btn input:checked + label.e-btn{
+    background-color: rgb(1, 83, 143)
+    color:aquamarine;
+    border: 1px solid #fff;
+}
