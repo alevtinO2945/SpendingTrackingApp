@@ -22,26 +22,11 @@ namespace SpendingTrackingApp.Controllers
         // GET: Category
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Categories.ToListAsync());
+            return _context.Categories != null ?
+                      View(await _context.Categories.ToListAsync()) :
+                      Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
 
-        // GET: Category/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Categories == null)
-            {
-                return NotFound();
-            }
-
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
-            if (category == null)
-            {
-                return NotFound();
-            }
-
-            return View(category);
-        }
 
         // GET: Category/AddOrEdit
         public IActionResult AddOrEdit(int id = 0)
@@ -61,7 +46,10 @@ namespace SpendingTrackingApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                if (category.CategoryId == 0)
+                    _context.Add(category);
+                else
+                    _context.Update(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

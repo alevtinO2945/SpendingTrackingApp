@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<SpendingTrackingApp.Models.Transaction>
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "TransactionController";
+    ViewData["PageTitle"] = "Transactions";
+    ViewData["PageActionText"] = "+ New Transaction";
+    ViewData["PageActionUrl"] = "/Transaction/AddOrEdit";
 }
 
 <h1>Index</h1>

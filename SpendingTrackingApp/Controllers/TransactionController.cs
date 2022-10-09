@@ -10,23 +10,23 @@ using SpendingTrackingApp.Models;
 
 namespace SpendingTrackingApp.Controllers
 {
-    public class TransactionsController : Controller
+    public class TransactionController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public TransactionsController(ApplicationDbContext context)
+        public TransactionController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Transactions
+        // GET: Transaction
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Transactions.Include(t => t.Category);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Transactions/AddOrEdit
+        // GET: Transaction/AddOrEdit
         public async Task<IActionResult> AddOrEdit(int id = 0)
         {
             PopulateCategories();
@@ -36,7 +36,7 @@ namespace SpendingTrackingApp.Controllers
                 return View(_context.Transactions.Find(id));
         }
 
-        // GET: Transactions/AddOrEdit
+        // POST: Transaction/AddOrEdit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("TransactionId, CategoryId, Amount, Note, Date")] Transaction transaction)
@@ -57,7 +57,7 @@ namespace SpendingTrackingApp.Controllers
 
 
 
-        // POST: Transactions/Delete/5
+        // POST: Transaction/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

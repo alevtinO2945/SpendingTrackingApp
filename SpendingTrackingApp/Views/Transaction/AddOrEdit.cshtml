@@ -1,8 +1,7 @@
 ﻿@model SpendingTrackingApp.Models.Transaction
 
 @{
-    ViewData["Title"] = "Create";
-    Layout = "TransactionController";
+    ViewData["PageTitle"] = Model.TransactionId == 0 ? "Create a new transaction" : "Edit transaction";
 }
 
 <h1>Create</h1>
