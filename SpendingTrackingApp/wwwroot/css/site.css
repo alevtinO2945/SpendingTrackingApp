@@ -17,6 +17,7 @@ body {
   margin-bottom: 60px;
 }
 
+
 .e-bigger{
     font-size: x-large;
 }
@@ -37,18 +38,22 @@ body {
 
 .e-btn-group.my-rbt-group.e-btn input:checked + label.e-btn{
     background-color: rgb(1, 83, 143)
-    color:aquamarine;
+    color:whitesmoke;
     border: 1px solid #fff;
 }
 
 
 #sidebar {
-    background-color: #12161d;
+    background-color: #198754;
     border-right: 1px dashed rgba(75,82,85,0.24);
     padding: 10px 20px;
     overflow: hidden;
+    min-height: 100vh
 }
 
+.fa-solid{
+    color: whitesmoke;
+}
     #sidebar .e-menu-wrapper {
         width: 100%;
         background-color: inherit;
@@ -107,9 +112,26 @@ body {
     content: '\f101'
 }
 
+.e-menu-wrapper .e-menu .e-menu-item .e-menu-icon, .e-menu-container .e-menu .e-menu-item .e-menu-icon{
+    color: whitesmoke;
+}
 
-
-.widget{
+.e-menu-wrapper .e-menu .e-menu-item .e-menu-url, .e-menu-container .e-menu .e-menu-item .e-menu-url{
+    color: whitesmoke;
+}
+.widget {
     border-radius: 1rem;
     background-color: #e6e6e6;
+}
+
+.app-logo{
+    width: 85px;
+    height: 85px;
+}
+
+.profile-pic{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom:10px;
 }
