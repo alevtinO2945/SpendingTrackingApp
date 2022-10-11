@@ -16,7 +16,7 @@ namespace SpendingTrackingApp.Models
         public string Type { get; set; } = "Expense";
 
         [NotMapped]
-        public string? TitleWithIcon
+        public string? CategoryTitleWithIcon
         {
             get
             {

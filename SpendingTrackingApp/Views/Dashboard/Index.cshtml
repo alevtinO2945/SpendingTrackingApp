@@ -54,7 +54,7 @@
 
             <ejs-accumulationchart id="doghnutchart" enableSmartLabels background="#212529">
                 <e-accumulation-series-collection>
-                    <e-accumulation-series dataSource="@ViewBag.DoughnutChartData" 
+                    <e-accumulation-series dataSource="@ViewBag.DoughuntChartData"
                                            xName="categoryTitleWithIcon" yName="amount"
                                            innerRadius="60%" legentShape="Circle"
                                            palettes=@(new string[] {"#123456", "@123456"})>
@@ -112,7 +112,7 @@
             </div>
             <div class="px-4 pb-4">
                 <ejs-grid id="recent-transactions"
-                          dataSource="@ViewBag.Transactions" gridLines="None">
+                          dataSource="@ViewBag.RecentTransactions" gridLines="None">
                     <e-grid-columns>
                         <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
                         <e-grid-column headerText="Date" field="Date" type="date" format="MMM-dd-yy"></e-grid-column>

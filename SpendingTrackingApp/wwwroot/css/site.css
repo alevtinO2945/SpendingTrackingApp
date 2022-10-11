@@ -29,6 +29,8 @@ body {
 .e-btn-group.my-rbt-group.e-btn{
     width: 50%;
 }
+
+
 .my-rbt-group label.e-btn{
     box-shadow: none !important;
     border: 1px solid #fff;
@@ -48,7 +50,11 @@ body {
     border-right: 1px dashed rgba(75,82,85,0.24);
     padding: 10px 20px;
     overflow: hidden;
-    min-height: 100vh
+    min-height: 100vh;
+}
+
+.e-sidebar-context{
+    min-height: 100vh;
 }
 
 .fa-solid{
