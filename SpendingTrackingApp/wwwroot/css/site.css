@@ -57,9 +57,7 @@ body {
     min-height: 100vh;
 }
 
-.fa-solid{
-    color: whitesmoke;
-}
+
     #sidebar .e-menu-wrapper {
         width: 100%;
         background-color: inherit;
@@ -83,6 +81,7 @@ body {
     padding-right: 10px;
 }
 
+
     #sidebar.e-close .app-logo {
         display: none;
     }
@@ -96,10 +95,7 @@ body {
     }
 
 
-    #sidebar.e-open .e-anchor-wrap,
-    #sidebar.e-close .e-menu-icon, #sidebar.e-open .e-menu-icon {
-        visibility: visible;
-    }
+    
 
 #sidebar.e-open .profile-wrapper .titles, #sidebar.e-open .app-logo {
     display: flex;
